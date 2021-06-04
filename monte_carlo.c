@@ -10,21 +10,18 @@ float frandom() {
 }
 
 float mc_pi(int n){
-  int pointsInsideCircle,points;
-  float result,x,y,distance;
-  pointsInsideCircle = 0;
-  points = 0;
-  for(int i=0;i<n;i++){
-    x = frandom();
-    y = frandom();
-    distance = sqrt(pow(x,2)+pow(y,2));
-    if(distance <= 1){
-      pointsInsideCircle++;
-    }
-    points++;
-  }
-  result = 4*(pointsInsideCircle/points);
-  return(result);
+float x=0, y=0;
+int count=0;
+float pi;
+for(int i=0;i<n;i++)
+{
+x=frandom();
+y=frandom();
+if((x*x+y*y)<=1)
+count+=1;
+}
+pi= (float)(4*count)/n;
+return (pi);
 }
 
 
