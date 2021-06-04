@@ -5,7 +5,10 @@
 
 float wallis_pi(int);
 float wallis_pi(int n){
-  int temp = (4*pow(n,2))/(4*pow(n,2)-1);
+  int temp = 1;
+  for(int i=1;i<=n;i++){
+    temp *= (4*pow(n,2))/(4*pow(n,2)-1);
+  }
   return(temp);
 }
 int main(void) {
