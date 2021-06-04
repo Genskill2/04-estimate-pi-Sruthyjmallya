@@ -5,11 +5,14 @@
 
 float wallis_pi(int);
 float wallis_pi(int n){
-  int temp = 1;
-  for(int i=1;i<=n;i++){
-    temp *= (4*pow(n,2))/(4*pow(n,2)-1);
+  int i;
+  float pi=1,nr,dr;
+  for(i=1;i<=n;i++){
+    nr=(4*(i*i));
+    dr=(4*(i*i)-1);
+    pi*=nr/dr;
   }
-  return(temp);
+  return 2*pi;
 }
 int main(void) {
   float pi;
