@@ -4,8 +4,8 @@
 #include <math.h>
 
 float mc_pi(int n){
-  int x,y,distance,pointsInsideCircle,points;
-  float result;
+  int pointsInsideCircle,points;
+  float result,x,y,distance;
   pointsInsideCircle = 0;
   points = 0;
   for(int i=0;i<n;i++){
