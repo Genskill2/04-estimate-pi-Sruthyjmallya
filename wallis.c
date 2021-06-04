@@ -4,7 +4,10 @@
 #include <math.h>
 
 float wallis_pi(int);
-
+float wallis_pi(int n){
+  int temp = (4*pow(n,2))/(4*pow(n,2)-1);
+  return(temp);
+}
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
